@@ -10,7 +10,7 @@ pipeline {
     stages {
         stage('Clone') {
             steps {
-                git 'https://github.com/<your_github_user>/<your_repo>.git'
+                git 'https://github.com/Barhoum1919/gitops.git'
             }
         }
 
@@ -33,8 +33,8 @@ pipeline {
             steps {
                 sh '''
                     sed -i "s|<DOCKER_USERNAME>|$DOCKERHUB_USERNAME|g" k8s/deployment.yaml
-                    git config --global user.email "jenkins@example.com"
-                    git config --global user.name "Jenkins"
+                    git config --global user.email "ibrahimdarghouthi1919@gmail.com"
+                    git config --global user.name "Barhoum1919"
                     git add k8s/deployment.yaml
                     git commit -m "Update image tag"
                     git push
