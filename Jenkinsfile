@@ -1,8 +1,8 @@
 pipeline {
     agent any
-
+    
     environment {
-        DOCKERHUB_CREDENTIALS = credentials('dockerhub')  // From Jenkins credentials
+        DOCKERHUB_CREDENTIALS = credentials('dockerhub')  
         IMAGE_NAME = "flask-gitops"
         DOCKERHUB_USERNAME = "ibrahimdarghouthi1919"
     }
